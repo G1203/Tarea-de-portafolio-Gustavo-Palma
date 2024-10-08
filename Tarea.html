@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio Personal</title>
+  
+  <!-- Agregar Bootstrap 5.3.3 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Estilos personalizados -->
+  <style>
+    /* Hacemos que el body use flexbox */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    /* El contenido ocupará todo el espacio disponible */
+    main {
+      flex: 1;
+    }
+
+    /* Hero con overlay y estilo más profesional */
+    .hero {
+      position: relative;
+      background-image: url('https://source.unsplash.com/random/1600x900'); /* Fondo de imagen */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 75vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    
+    /* Capa oscura encima de la imagen */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Efecto overlay oscuro */
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero img {
+      width: 200px; /* Ajustar el tamaño de la imagen */
+      border-radius: 50%; /* Imagen circular */
+      border: 5px solid white; /* Borde blanco alrededor de la imagen */
+      margin-bottom: 1rem; /* Margen inferior para separación */
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero .btn-primary {
+      padding: 0.75rem 1.5rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease; /* Transición suave al cambiar color */
+    }
+
+    /* Cambiar color al pasar el mouse (hover) */
+    .hero .btn-primary:hover {
+      background-color: #ff5733; /* Color personalizado al hacer hover */
+      border-color: #ff5733;
+    }
+
+    .content {
+      padding: 4rem 0;
+    }
+
+    /* Estilo y transición de las tarjetas */
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    }
+
+    /* Efecto al pasar el mouse sobre la tarjeta */
+    .card:hover {
+      transform: translateY(-10px); /* Eleva la tarjeta */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más grande */
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="desa1.png" alt="Mi Foto"> <!-- Imagen de perfil -->
+      <h1>¡Hola, soy Gustavo Palma!</h1>
+      <p class="lead">Desarrollador Web | Diseñador UI/UX | Amante del código</p>
+      <a href="#sobre-mi" class="btn btn-primary">Conóceme más</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container content" id="sobre-mi">
+    <section class="text-center">
+      <h2>Sobre mí</h2>
+      <p class="lead">Soy un apasionado desarrollador web con experiencia en crear interfaces dinámicas y amigables usando tecnologías modernas. Me encanta trabajar en proyectos creativos que desafían mis habilidades.</p>
+    </section>
+
+    <section class="row my-5 text-center">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="desa2.jpg" class="card-img-top" alt="Desarrollo Web">
+          <div class="card-body">
+            <h3 class="card-title">Desarrollo Web</h3>
+            <p class="card-text">Experto en HTML, CSS, JavaScript y frameworks como React y Vue.js.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="desa3.png" class="card-img-top" alt="Diseño UI/UX">
+          <div class="card-body">
+            <h3 class="card-title">Diseño UI/UX</h3>
+            <p class="card-text">Diseños centrados en el usuario que combinan funcionalidad y estética.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="desa4.jpg" class="card-img-top" alt="Colaboración">
+          <div class="card-body">
+            <h3 class="card-title">Colaboración</h3>
+            <p class="card-text">Trabajo en equipo y comunicación efectiva para lograr objetivos ambiciosos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Gustavo Palma - Todos los derechos reservados.</p>
+    <p>
+      <a href="https://github.com/tu-usuario" class="text-white">GitHub</a> | 
+      <a href="https://www.linkedin.com/in/tu-perfil" class="text-white">LinkedIn</a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
